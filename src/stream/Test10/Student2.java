@@ -5,7 +5,7 @@ import java.util.Map;
 public class Student2 {
     String name;
     String group;
-    Map<String, Integer> grades;
+    Map<String, Integer> grades; // предмет -> оценка
 
     public Student2(String name, String group, Map<String, Integer> grades) {
         this.name = name;
