@@ -1,9 +1,7 @@
-package stream;
+package stream.Test2;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Test2 {
     public static void main(String[] args) {
@@ -53,73 +51,6 @@ public class Test2 {
                 .findFirst().get();
         System.out.println(first);
 
-    }
-}
-
-class Student {
-    private String name;
-    private char sex;
-    private int age;
-    private int course;
-    private double avgGrade;
-
-    public Student(String name, char sex, int age, int course, double avgGrade) {
-        this.setName(name);
-        this.setSex(sex);
-        this.setAge(age);
-        this.setCourse(course);
-        this.setAvgGrade(avgGrade);
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public char getSex() {
-        return sex;
-    }
-
-    public void setSex(char sex) {
-        this.sex = sex;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getCourse() {
-        return course;
-    }
-
-    public void setCourse(int course) {
-        this.course = course;
-    }
-
-    public double getAvgGrade() {
-        return avgGrade;
-    }
-
-    public void setAvgGrade(double avgGrade) {
-        this.avgGrade = avgGrade;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", sex=" + sex +
-                ", age=" + age +
-                ", course=" + course +
-                ", avgGrade=" + avgGrade +
-                '}';
     }
 }
 

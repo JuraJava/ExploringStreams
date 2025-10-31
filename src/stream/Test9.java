@@ -1,8 +1,9 @@
 package stream;
 
+import stream.Test2.Student;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Test9 {
     public static void main(String[] args) {
