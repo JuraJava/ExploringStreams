@@ -1,4 +1,4 @@
-package Test7;
+package stream.Test7;
 
 import stream.Test2.Student;
 
