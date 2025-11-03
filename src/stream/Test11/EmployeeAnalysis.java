@@ -109,4 +109,5 @@ public class EmployeeAnalysis {
 
         System.out.printf("\n7. Общий зарплатный фонд: %.2f%n", totalSalary);
     }
+
 }
