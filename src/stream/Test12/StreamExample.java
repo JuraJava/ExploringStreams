@@ -10,6 +10,7 @@ package stream.Test12;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
+import java.util.TreeMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -27,33 +28,46 @@ public class StreamExample {
                 new Employee("Дмитрий", "IT", 90000)
         );
 
-        // Решение с использованием Stream API
-        Map<String, Double> result = employees.stream()
-                // Шаг 1: Фильтрация сотрудников с зарплатой выше 50,000
+        // Более простое решение без дополнительной сортировки
+        Map<String, Double> simpleResult = employees.stream()
                 .filter(emp -> emp.getSalary() > 50000)
-
-                // Шаг 2: Группировка по отделам
                 .collect(Collectors.groupingBy(
                         Employee::getDepartment,
-
-                        // Шаг 3: Вычисление средней зарплаты для каждой группы
+                        TreeMap::new,  // TreeMap автоматически сортирует по ключу
                         Collectors.averagingDouble(Employee::getSalary)
-                ))
-
-                // Шаг 4: Сортировка по названию отдела
-                .entrySet()
-                .stream()
-                .sorted(Map.Entry.comparingByKey())
-                .collect(Collectors.toMap(
-                        Map.Entry::getKey,
-                        Map.Entry::getValue,
-                        (oldValue, newValue) -> oldValue,
-                        LinkedHashMap::new
                 ));
+
+
+//        // Решение с использованием Stream API
+//        Map<String, Double> result = employees.stream()
+//                // Шаг 1: Фильтрация сотрудников с зарплатой выше 50,000
+//                .filter(emp -> emp.getSalary() > 50000)
+//
+//                // Шаг 2: Группировка по отделам
+//                .collect(Collectors.groupingBy(
+//                        Employee::getDepartment,
+//
+//                        // Шаг 3: Вычисление средней зарплаты для каждой группы
+//                        Collectors.averagingDouble(Employee::getSalary)
+//                ))
+//
+//                // Шаг 4: Сортировка по названию отдела
+//                .entrySet()
+//                .stream()
+//                .sorted(Map.Entry.comparingByKey())
+//                .collect(Collectors.toMap(
+//                        Map.Entry::getKey,
+//                        Map.Entry::getValue,
+//                        (oldValue, newValue) -> oldValue,
+//                        LinkedHashMap::new
+//                ));
 
         // Вывод результата
         System.out.println("Средняя зарплата по отделам (сотрудники с зарплатой > 50,000):");
-        result.forEach((dept, avgSalary) ->
+
+//        result.forEach((dept, avgSalary) ->
+        simpleResult.forEach((dept, avgSalary) ->
+
                 System.out.printf("%s: %.2f%n", dept, avgSalary)
         );
     }
