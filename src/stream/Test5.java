@@ -1,8 +1,7 @@
 package stream;
 
 
-import stream.Test2.Student;
-import stream.Test2.Test2;
+import stream.test2.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;

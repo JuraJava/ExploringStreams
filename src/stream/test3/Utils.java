@@ -1,4 +1,4 @@
-package stream.Test3;
+package stream.test3;
 
 class Utils {
     public static void myMethod(int a){

@@ -1,4 +1,4 @@
-package stream.Test11;
+package stream.test11;
 
 public class Employee {
     private String name;

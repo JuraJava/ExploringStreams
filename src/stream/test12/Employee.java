@@ -1,5 +1,5 @@
 
-package stream.Test12;
+package stream.test12;
 
 public class Employee {
     private String name;

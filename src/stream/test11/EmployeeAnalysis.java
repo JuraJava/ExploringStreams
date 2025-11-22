@@ -2,7 +2,7 @@
  * Дан список сотрудников с информацией о имени, отделе, зарплате и рейтинге производительности.
  * Нужно выполнить комплексный анализ данных.
  */
-package stream.Test11;
+package stream.test11;
 
 import java.util.Arrays;
 import java.util.Comparator;

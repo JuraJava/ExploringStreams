@@ -6,10 +6,9 @@
  * 4.	Вывести результат в отсортированном виде по названию отдела
  */
 
-package stream.Test12;
+package stream.test12;
 
 import java.util.Arrays;
-import java.util.LinkedHashMap;
 import java.util.TreeMap;
 import java.util.List;
 import java.util.Map;

@@ -3,7 +3,7 @@
  * Нужно выполнить несколько операций анализа.
  */
 
-package stream.Test10;
+package stream.test10;
 import java.util.*;
 import java.util.stream.Collectors;
 
